@@ -53,28 +53,6 @@ CHAINS.forEach(async (chain) => {
     functionName: "getThreshold"
   }));
 
-/*
-    {
-      "to": "0x580A96BC816C2324Bdff5eb2a7E159AE7ee63022",
-      "value": "0",
-      "data": null,
-      "contractMethod": {
-        "inputs": [
-          { "internalType": "address", "name": "prevOwner", "type": "address" },
-          { "internalType": "address", "name": "owner", "type": "address" },
-          { "internalType": "uint256", "name": "_threshold", "type": "uint256" }
-        ],
-        "name": "removeOwner",
-        "payable": false
-      },
-      "contractInputsValues": {
-        "prevOwner": "0xFd25Dc31196c73E15eDE57391c32472193147FF5",
-        "owner": "0x651EC1afd03C4A5F731dA8Fa4fc124802392b8dA",
-        "_threshold": "4"
-      }
-    },
-*/
-
   const ownersToRemove = currentOwners.filter(a => !NEW_OWNERS.includes(a)).sort((a, b) => currentOwners.indexOf(b) - currentOwners.indexOf(a));
   const ownersToAdd = NEW_OWNERS.filter(a => !currentOwners.includes(a));
 
