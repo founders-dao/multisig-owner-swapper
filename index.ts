@@ -125,5 +125,5 @@ CHAINS.forEach(async (chain) => {
     transactions
   });
 
-  fs.writeFileSync(`./swap_owners_${chain.name}.json`, JSON.stringify(batch, null, 2));
+  fs.writeFileSync(`./swap_owners_${SAFE.slice(0, 6)}_${chain.name}.json`, JSON.stringify(batch, null, 2));
 })
