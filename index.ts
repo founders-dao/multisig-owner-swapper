@@ -121,7 +121,7 @@ CHAINS.forEach(async (chain) => {
     payable: false
   };
   for (const ownerToAdd of ownersToAdd) {
-    const isLastOwner = currentOwners.indexOf(ownerToAdd) === currentOwners.length - 1;
+    const isLastOwner = ownersToAdd.indexOf(ownerToAdd) === ownersToAdd.length - 1;
     const transaction = {
       ...transactionBase,
       contractMethod: addOwnerMethod,
